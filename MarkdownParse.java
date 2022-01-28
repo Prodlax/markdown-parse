@@ -16,7 +16,7 @@ public class MarkdownParse {
             if (nextOpenBracket == -1)
             {
                 System.out.println("Invalid Input");
-                break;
+                throw new IllegalArgumentException();
             }
             int nextCloseBracket = markdown.indexOf("](", nextOpenBracket);
             int closeParen = markdown.indexOf(")", nextCloseBracket);
