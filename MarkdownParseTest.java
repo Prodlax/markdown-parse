@@ -19,13 +19,13 @@ public class MarkdownParseTest {
         assertEquals("test one", testList, MarkdownParse.getLinks(contents));
     }
 
-    @Test
-    public void TestParseTwo() throws IOException {
-        Path fileName = Path.of("test.md");
-	    String contents = Files.readString(fileName);
-        List<String> testList = List.of("fail");
-        assertEquals("test two", testList, MarkdownParse.getLinks(contents));
-    }
+    // @Test
+    // public void TestParseTwo() throws IOException {
+    //     Path fileName = Path.of("test.md");
+	//     String contents = Files.readString(fileName);
+    //     List<String> testList = List.of("fail");
+    //     assertEquals("test two", testList, MarkdownParse.getLinks(contents));
+    // }
 
     @Test
     public void TestParseThree() throws IOException {
