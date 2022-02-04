@@ -23,8 +23,12 @@ public class MarkdownParseTest {
     public void TestParseTwo() throws IOException {
         Path fileName = Path.of("test.md");
 	    String contents = Files.readString(fileName);
-        List<String> testList = List.of("fail");
-        assertEquals("test two", testList, MarkdownParse.getLinks(contents));
+        try {
+            MarkdownParse.getLinks(contents);
+            fail();
+        } catch (Exception e) {
+            //pass
+        }
     }
 
     @Test
